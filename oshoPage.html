@@ -333,227 +333,137 @@
                 </div>
             </div>
         </header>
-
-
             <div role="main" class="main">
 
-                <section class="page-top">
+                <section class="page-top custom-product">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12">
-                                <ul class="breadcrumb">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li class="active">Contact Us</li>
-                                </ul>
+                            <div class="col-md-12 center">
+                                <h1>Introducing our Portfolio of <strong>Successful</strong> Companies.</h1>
+                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curatur pellentesque neque eget posuere porta.</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
-                                <h2>Contact Us - Advanced</h2>
+                            <div class="col-md-12 center">
+                                <a href="#timeline" data-hash class="btn btn-default btn-lg push-bottom">Get Started!</a>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- Google Maps -->
-                <div id="googlemaps" class="google-map hidden-xs"></div>
-
                 <div class="container">
 
-                    <div class="row">
-                        <div class="col-md-6">
-
-                            <div class="offset-anchor" id="contact-sent"></div>
-
-                            <?php
-                            if($arrResult['response'] == 'success') {
-                            ?>
-                            <div class="alert alert-success" id="contactSuccess">
-                                <strong>Success!</strong> Your message has been sent to us.
+                    <section class="timeline" id="timeline">
+                        <div class="timeline-body">
+                            <div class="timeline-date">
+                                <h3>November 2013</h3>
                             </div>
-                            <?php
-                            } else if($arrResult['response'] == 'error') {
-                            ?>
-                            <div class="alert alert-danger" id="contactError">
-                                <strong>Error!</strong> There was an error sending your message.
-                            </div>
-                            <?php
-                            } else if($arrResult['response'] == 'captchaError') {
-                            ?>
-                            <div class="alert alert-danger" id="contactError">
-                                <strong>Error!</strong> Verificantion failed.
-                            </div>
-                            <?php
-                            }
-                            ?>
 
-                            <h2 class="short"><strong>Contact</strong> Us</h2>
-                            <form id="contactForm" action="contact-us-advanced.php#contact-sent" method="POST" enctype="multipart/form-data">
-                                <input type="hidden" value="true" name="emailSent" id="emailSent">
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-6">
-                                            <label>Your name *</label>
-                                            <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label>Your email address *</label>
-                                            <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email">
-                                        </div>
-                                    </div>
+                            <article class="timeline-box left">
+                                <div class="portfolio-item img-thumbnail">
+                                    <a href="portfolio-single-project.html" class="thumb-info">
+                                        <img alt="" width="560" height="375" class="img-responsive" src="img/projects/project.jpg">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner">SEO</span>
+                                            <span class="thumb-info-type">Website</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <span title="Universal" href="#" class="thumb-info-action-icon"><i class="icon icon-link"></i></span>
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <label>Subject</label>
-                                            <select data-msg-required="Please enter the subject." class="form-control" name="subject" id="subject">
-                                                <option value=""></option>
-                                                <option value="Option 1">Option 1</option>
-                                                <option value="Option 2">Option 2</option>
-                                                <option value="Option 3">Option 3</option>
-                                                <option value="Option 4">Option 4</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                            </article>
+                            <article class="timeline-box right">
+                                <div class="portfolio-item img-thumbnail">
+                                    <a href="portfolio-single-project.html" class="thumb-info">
+                                        <img alt="" width="560" height="375" class="img-responsive" src="img/projects/project-1.jpg">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner">Okler</span>
+                                            <span class="thumb-info-type">Brand</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <span title="Universal" href="#" class="thumb-info-action-icon"><i class="icon icon-link"></i></span>
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <label>Checkboxes</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox1" value="option1"> 1
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox2" value="option2"> 2
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox3" value="option3"> 3
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox2" value="option4"> 4
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox3" value="option5"> 5
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <label>Radios</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio1" value="option1" checked="checked"> 1
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio2" value="option2"> 2
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio3" value="option3"> 3
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio2" value="option4"> 4
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio3" value="option5"> 5
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </article>
+                            <article class="timeline-box left">
+                                <div class="portfolio-item img-thumbnail">
+                                    <a href="portfolio-single-project.html" class="thumb-info">
+                                        <img alt="" width="560" height="375" class="img-responsive" src="img/projects/project-2.jpg">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner">The Fly</span>
+                                            <span class="thumb-info-type">Logo</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <span title="Universal" href="#" class="thumb-info-action-icon"><i class="icon icon-link"></i></span>
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <label>Attachment</label>
-                                            <input type="file" name="attachment" id="attachment">
-                                        </div>
-                                    </div>
+                            </article>
+                            <article class="timeline-box right">
+                                <div class="portfolio-item img-thumbnail">
+                                    <a href="portfolio-single-project.html" class="thumb-info">
+                                        <img alt="" width="560" height="375" class="img-responsive" src="img/projects/project-3.jpg">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner">The Code</span>
+                                            <span class="thumb-info-type">Website</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <span title="Universal" href="#" class="thumb-info-action-icon"><i class="icon icon-link"></i></span>
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <label>Message *</label>
-                                            <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"></textarea>
-                                        </div>
-                                    </div>
+                            </article>
+                            <div class="timeline-date">
+                                <h3>September 2013</h3>
+                            </div>
+                            <article class="timeline-box left">
+                                <div class="portfolio-item img-thumbnail">
+                                    <a href="portfolio-single-project.html" class="thumb-info">
+                                        <img alt="" width="560" height="375" class="img-responsive" src="img/projects/project.jpg">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner">SEO</span>
+                                            <span class="thumb-info-type">Website</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <span title="Universal" href="#" class="thumb-info-action-icon"><i class="icon icon-link"></i></span>
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Human Verification *</label>
-                                    </div>
+                            </article>
+                            <article class="timeline-box right">
+                                <div class="portfolio-item img-thumbnail">
+                                    <a href="portfolio-single-project.html" class="thumb-info">
+                                        <img alt="" width="560" height="375" class="img-responsive" src="img/projects/project-1.jpg">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner">Okler</span>
+                                            <span class="thumb-info-type">Brand</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <span title="Universal" href="#" class="thumb-info-action-icon"><i class="icon icon-link"></i></span>
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-4">
-                                            <div class="captcha form-control">
-                                                <div class="captcha-image">
-                                                    <?php
-                                                    $_SESSION['captcha'] = simple_php_captcha(array(
-                                                        'min_length' => 6,
-                                                        'max_length' => 6,
-                                                        'min_font_size' => 22,
-                                                        'max_font_size' => 22,
-                                                        'angle_max' => 3
-                                                    ));
-
-                                                    echo '<img src="' . "php/simple-php-captcha/simple-php-captcha.php/" . $_SESSION['captcha']['image_src'] . '" alt="CAPTCHA code">';
-                                                    ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <input type="text" value="" maxlength="6" data-msg-captcha="Wrong verification code." data-msg-required="Please enter the verification code." placeholder="Type the verification code." class="form-control" name="captcha" id="captcha">
-                                        </div>
-                                    </div>
+                            </article>
+                            <article class="timeline-box left">
+                                <div class="portfolio-item img-thumbnail">
+                                    <a href="portfolio-single-project.html" class="thumb-info">
+                                        <img alt="" width="560" height="375" class="img-responsive" src="img/projects/project-2.jpg">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner">The Fly</span>
+                                            <span class="thumb-info-type">Logo</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <span title="Universal" href="#" class="thumb-info-action-icon"><i class="icon icon-link"></i></span>
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <hr>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="submit" id="contactFormSubmit" value="Send Message" class="btn btn-primary btn-lg pull-right" data-loading-text="Loading...">
-                                    </div>
-                                </div>
-                            </form>
+                            </article>
                         </div>
-                        <div class="col-md-6">
 
-                            <h4 class="push-top">Get in <strong>touch</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.</p>
+                    </section>
 
-                            <hr />
-
-                            <h4>The <strong>Office</strong></h4>
-                            <ul class="list-unstyled">
-                                <li><i class="icon icon-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</li>
-                                <li><i class="icon icon-phone"></i> <strong>Phone:</strong> (123) 456-7890</li>
-                                <li><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
-                            </ul>
-
-                            <hr />
-
-                            <h4>Business <strong>Hours</strong></h4>
-                            <ul class="list-unstyled">
-                                <li><i class="icon icon-time"></i> Monday - Friday 9am to 5pm</li>
-                                <li><i class="icon icon-time"></i> Saturday - 9am to 2pm</li>
-                                <li><i class="icon icon-time"></i> Sunday - Closed</li>
-                            </ul>
-
-                        </div>
-                    </div>
 
                 </div>
 
