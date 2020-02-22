@@ -93,13 +93,20 @@
                                                                         </span>
                                                                     </div>
                                                                     <div class="col-lg-3">
-                                                                        <span class="oshoPage.html">SADGURU OSHO SIDDHARTH</span>
+                                                                        
+                                                                        <span class="dropdown-mega-sub-title">
+                                                                            <a class="" href="sufiBaba.html">PARAM GURU OSHO</a> 
+                                                                        </span>
                                                                     </div>
                                                                     <div class="col-lg-3">
-                                                                        <span class="oshoPage.html">SUFI BABA SHAH QLENDAR</span>
+                                                                        <span class="dropdown-mega-sub-title">
+                                                                            <a class="" href="sufiBaba.html">PARAM GURU OSHO</a> 
+                                                                        </span>
                                                                     </div>
                                                                     <div class="col-lg-3">
-                                                                        <span class="oshoPage.html">GURU NANAK DEV</span>
+                                                                        <span class="dropdown-mega-sub-title">
+                                                                            <a class="" href="sufiBaba.html">PARAM GURU OSHO</a> 
+                                                                        </span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -189,7 +196,7 @@
                                                     </ul>
                                                 </li>
                                                 <li class="dropdown dropdown-mega">
-                                                    <a class="dropdown-item dropdown-toggle" href="#">
+                                                    <a class="dropdown-item dropdown-toggle" href="program.html">
                                                         Program
                                                     </a>
                                                     <ul class="dropdown-menu">
@@ -270,12 +277,7 @@
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li class="dropdown dropdown-mega">
-                                                    <a class="dropdown-item dropdown-toggle" href="blog.html">
-                                                        Blog
-                                                    </a>
 
-                                                </li>
                                                 <li class="dropdown dropdown-mega">
                                                     <a class="dropdown-item dropdown-toggle" href="#">
                                                         People
@@ -316,6 +318,32 @@
                                                             </div>
                                                         </li>
                                                     </ul>
+                                                </li>
+                                                <li class="dropdown dropdown-mega">
+                                                    <a class="dropdown-item dropdown-toggle" href="faq.html">
+                                                        Others
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <div class="dropdown-mega-content">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3">
+                                                                        <span class="dropdown-mega-sub-title"><a class="dropdown-item" href="faq.html">FAQ</a></span>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <span class="dropdown-mega-sub-title"><a class="dropdown-item" href="contactUs.html">Contact</a></span>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <span class="dropdown-mega-sub-title"><a class="dropdown-item" href="news.html">News</a></span>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <span class="dropdown-mega-sub-title"><a class="dropdown-item" href="testimonials.html">Alerts</a></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
                                                 </li>
                                             </ul>
                                         </nav>
@@ -361,37 +389,12 @@
                 <div id="googlemaps" class="google-map hidden-xs"></div>
 
                 <div class="container">
-
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
 
-                            <div class="offset-anchor" id="contact-sent"></div>
+                            <h2 class="mb-3 mt-2"><strong>Contact</strong> Us</h2>
 
-                            <?php
-                            if($arrResult['response'] == 'success') {
-                            ?>
-                            <div class="alert alert-success" id="contactSuccess">
-                                <strong>Success!</strong> Your message has been sent to us.
-                            </div>
-                            <?php
-                            } else if($arrResult['response'] == 'error') {
-                            ?>
-                            <div class="alert alert-danger" id="contactError">
-                                <strong>Error!</strong> There was an error sending your message.
-                            </div>
-                            <?php
-                            } else if($arrResult['response'] == 'captchaError') {
-                            ?>
-                            <div class="alert alert-danger" id="contactError">
-                                <strong>Error!</strong> Verificantion failed.
-                            </div>
-                            <?php
-                            }
-                            ?>
-
-                            <h2 class="short"><strong>Contact</strong> Us</h2>
-                            <form id="contactForm" action="contact-us-advanced.php#contact-sent" method="POST" enctype="multipart/form-data">
-                                <input type="hidden" value="true" name="emailSent" id="emailSent">
+                            <form id="contactForm" action="php/contact-form.php" method="POST" novalidate="novalidate">
                                 <div class="row">
                                     <div class="form-group">
                                         <div class="col-md-6">
@@ -404,157 +407,50 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <label>Subject</label>
-                                            <select data-msg-required="Please enter the subject." class="form-control" name="subject" id="subject">
-                                                <option value=""></option>
-                                                <option value="Option 1">Option 1</option>
-                                                <option value="Option 2">Option 2</option>
-                                                <option value="Option 3">Option 3</option>
-                                                <option value="Option 4">Option 4</option>
-                                            </select>
-                                        </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <label>Subject</label>
+                                        <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject" required="">
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <label>Checkboxes</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox1" value="option1"> 1
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox2" value="option2"> 2
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox3" value="option3"> 3
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox2" value="option4"> 4
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox3" value="option5"> 5
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <label>Radios</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio1" value="option1" checked="checked"> 1
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio2" value="option2"> 2
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio3" value="option3"> 3
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio2" value="option4"> 4
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="radios" id="inlineRadio3" value="option5"> 5
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <label>Message *</label>
+                                        <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message" required=""></textarea>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <label>Attachment</label>
-                                            <input type="file" name="attachment" id="attachment">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <label>Message *</label>
-                                            <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Human Verification *</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <div class="col-md-4">
-                                            <div class="captcha form-control">
-                                                <div class="captcha-image">
-                                                    <?php
-                                                    $_SESSION['captcha'] = simple_php_captcha(array(
-                                                        'min_length' => 6,
-                                                        'max_length' => 6,
-                                                        'min_font_size' => 22,
-                                                        'max_font_size' => 22,
-                                                        'angle_max' => 3
-                                                    ));
-
-                                                    echo '<img src="' . "php/simple-php-captcha/simple-php-captcha.php/" . $_SESSION['captcha']['image_src'] . '" alt="CAPTCHA code">';
-                                                    ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <input type="text" value="" maxlength="6" data-msg-captcha="Wrong verification code." data-msg-required="Please enter the verification code." placeholder="Type the verification code." class="form-control" name="captcha" id="captcha">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <hr>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="submit" id="contactFormSubmit" value="Send Message" class="btn btn-primary btn-lg pull-right" data-loading-text="Loading...">
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <input type="submit" value="Send Message" class="btn btn-primary btn-lg" data-loading-text="Loading...">
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
 
-                            <h4 class="push-top">Get in <strong>touch</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.</p>
+                            <h4 class="heading-primary mt-4">Get in <strong>Touch</strong></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-                            <hr />
+                            <hr>
 
-                            <h4>The <strong>Office</strong></h4>
-                            <ul class="list-unstyled">
-                                <li><i class="icon icon-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</li>
-                                <li><i class="icon icon-phone"></i> <strong>Phone:</strong> (123) 456-7890</li>
-                                <li><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
+                            <h4 class="heading-primary">The <strong>Office</strong></h4>
+                            <ul class="list list-icons list-icons-style-3 mt-4">
+                                <li><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</li>
+                                <li><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-789</li>
+                                <li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
                             </ul>
 
-                            <hr />
+                            <hr>
 
-                            <h4>Business <strong>Hours</strong></h4>
-                            <ul class="list-unstyled">
-                                <li><i class="icon icon-time"></i> Monday - Friday 9am to 5pm</li>
-                                <li><i class="icon icon-time"></i> Saturday - 9am to 2pm</li>
-                                <li><i class="icon icon-time"></i> Sunday - Closed</li>
+                            <h4 class="heading-primary">Business <strong>Hours</strong></h4>
+                            <ul class="list list-icons list-dark mt-4">
+                                <li><i class="fa fa-clock-o"></i> Monday - Friday - 9am to 5pm</li>
+                                <li><i class="fa fa-clock-o"></i> Saturday - 9am to 2pm</li>
+                                <li><i class="fa fa-clock-o"></i> Sunday - Closed</li>
                             </ul>
 
                         </div>
+
                     </div>
 
                 </div>
