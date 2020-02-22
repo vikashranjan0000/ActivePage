@@ -2847,7 +2847,7 @@ html[dir="rtl"] #header .tip-light:before {
 
 @media (min-width: 992px) {
 	#header .header-nav-main nav > ul > li > a {
-		color: #0088cc;
+		color: #171717;
 	}
 
 	#header .header-nav-main nav > ul > li > a.dropdown-toggle:after {
@@ -2860,7 +2860,7 @@ html[dir="rtl"] #header .tip-light:before {
 
 	#header .header-nav-main nav > ul > li.open > a,
 	#header .header-nav-main nav > ul > li:hover > a {
-		background: #0088cc;
+		background: #ff8a00;
 	}
 
 	#header .header-nav-main nav > ul > li.dropdown .dropdown-menu {
@@ -2873,7 +2873,7 @@ html[dir="rtl"] #header .tip-light:before {
 
 	#header .header-nav-main nav > ul > li.dropdown.open > a:before,
 	#header .header-nav-main nav > ul > li.dropdown:hover > a:before {
-		border-bottom-color: #0088cc;
+		border-bottom-color: #ff8a00;
 	}
 
 	#header .header-nav-main nav > ul > li .dropdown-menu {

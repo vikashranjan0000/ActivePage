@@ -95,6 +95,7 @@ li {
 
 #header .header-column .header-row {
 	justify-content: inherit;
+	text-align: right;
 }
 
 #header .header-column .header-extra-info {
@@ -310,6 +311,7 @@ li {
 #header.header-narrow .header-logo {
 	margin-top: 0;
 	margin-bottom: 0;
+	margin: auto;
 }
 
 #header.header-narrow .header-nav {
@@ -3360,14 +3362,14 @@ html.dark .text-muted {
 	background: #0e0e0e;
 	border-top: 4px solid #0e0e0e;
 	font-size: 0.9em;
-	margin-top: 50px;
-	padding: 70px 0 0;
+	margin-top: 10px;
+	padding: 20px 0 0;
 	position: relative;
 	clear: both;
 }
 
 #footer .container .row > div {
-	margin-bottom: 25px;
+	/* margin-bottom: 25px; */
 }
 
 #footer .container input:focus {
@@ -3384,6 +3386,7 @@ html.dark .text-muted {
 
 #footer h4 {
 	font-size: 1.8em;
+	margin-bottom: 5px;
 	font-weight: 200;
 }
 
@@ -3428,20 +3431,20 @@ html.dark .text-muted {
 #footer .footer-ribbon {
 	background: #999;
 	position: absolute;
-	margin: -90px 0 0 14px;
+	margin: -45px 0 0 14px;
 	padding: 10px 20px 6px 20px;
 }
 
 #footer .footer-ribbon:before {
 	border-right: 10px solid #646464;
-	border-top: 16px solid transparent;
+	border-top: 21px solid transparent;
 	content: "";
 	display: block;
 	height: 0;
 	right: 100%;
 	position: absolute;
 	top: 0;
-	width: 7px;
+	width: 12px;
 }
 
 #footer .footer-ribbon span {
@@ -3512,8 +3515,8 @@ html.dark .text-muted {
 #footer .contact i {
 	display: block;
 	float: left;
-	font-size: 1.2em;
-	margin: 7px 8px 10px 0;
+	font-size: 1.5em;
+	margin: 3px 8px 2px 0;
 	position: relative;
 	text-align: center;
 	top: -2px;
@@ -3526,7 +3529,7 @@ html.dark .text-muted {
 }
 
 #footer .contact p {
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 
 #footer .logo {
