@@ -24,21 +24,12 @@ function loadInitialData(){
 }
 
 function loadPlansData(){
-/*	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-	    if (this.readyState == 4 && this.status == 200) {
-	        var response = xhttp.responseText;
-	        planData = JSON.parse(response);*/
-	        renderPlans(myarr);
-/*	    }
-	};
-	xhttp.open("GET", "../php/PackageController.php", true);
-	xhttp.send();*/
+	renderPlans(myarr);
 }
 
 function renderPlans(faqData){
 	$('#fragmentholder_faq').empty();
-	var fragment = $(templates).filter('#bookcontent').html();
+	var fragment = $(templates).filter('#faqcontent').html();
 	for(var key in faqData){
     faqData[key].key = key;
 		$('#fragmentholder_faq').append(Mustache.render(fragment, faqData[key]));
