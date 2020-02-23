@@ -3362,7 +3362,7 @@ html.dark .text-muted {
 	background: #0e0e0e;
 	border-top: 4px solid #0e0e0e;
 	font-size: 0.9em;
-	margin-top: 10px;
+	margin-top: 20px;
 	padding: 20px 0 0;
 	position: relative;
 	clear: both;
@@ -4750,4 +4750,8 @@ html.boxed .main {
 	html.boxed {
 		background: none !important;
 	}
+}
+
+.main {
+    padding-top: 20px;
 }

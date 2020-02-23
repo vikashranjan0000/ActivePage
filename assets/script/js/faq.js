@@ -38,7 +38,7 @@ function loadPlansData(){
 
 function renderPlans(faqData){
 	$('#fragmentholder_faq').empty();
-	var fragment = $(templates).filter('#faqcontent').html();
+	var fragment = $(templates).filter('#bookcontent').html();
 	for(var key in faqData){
     faqData[key].key = key;
 		$('#fragmentholder_faq').append(Mustache.render(fragment, faqData[key]));

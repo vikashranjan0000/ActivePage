@@ -151,6 +151,9 @@ window.theme.fn = {
 
 }).apply(this, [window.theme, jQuery]);
 
+$("img.img-fluid").on("error", function () {
+    $(this).unbind("error").attr("src", "assets/img/icon/default.jpg");
+});
 // Carousel
 (function(theme, $) {
 
