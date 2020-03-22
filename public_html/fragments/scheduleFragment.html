@@ -1,0 +1,41 @@
+
+<tbody id="programScheduleContent">
+    <tr>
+        <td>
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td><strong>{{programData.programname}}</strong></td>
+                    </tr>
+                    <tr>
+                        <td>{{locationData.dhyankendraname}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td><span class="form-group"><div class="form-group">{{start_date}} to {{end_date}}</div> </span></td>
+        <td>
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td><strong>Conducted by</strong></td>
+                    </tr>
+                    <tr>
+                        <td>{{guidelines}}, {{comments}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td>
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+                <tbody>
+                    <tr>
+                        <span id="viewButton_{{programid}}"  data-toggle="modal" data-target="#myModal_{{programid}}" class="myButton pull-left">View</span>
+                        <span id="bookButton_{{programid}}" class="myButton pull-right">Book</span>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</tbody>
+
